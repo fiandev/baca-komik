@@ -22,10 +22,9 @@ class Controller {
       
       response.status(statusCode)
     }
-    raw(url) {
+    raw(url, statusCode = 200) {
       const { response } = this
-      
-      response.redirect(url)
+      response.status(statusCode).sendFile(url)
     }
 }
 

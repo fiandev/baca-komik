@@ -1,3 +1,4 @@
+const download = require('image-downloader')
 const Controller = require("cores/Controller")
 
 class ImageController extends Controller {
@@ -7,7 +8,21 @@ class ImageController extends Controller {
     if (!url) {
       this.status(403)
     }
-    this.raw(url)
+    try {
+      let options = {
+        url: url,
+        dest: '../../public/images/'
+      }
+      
+      await download.image(options)
+        .then(({ filename }) => {
+          console.log("[!] "+filename);
+          return this.raw(filename)
+        })
+      .catch((err) => console.error(err))
+    } catch (err) {
+      return this.status(500)
+    }
   }
 }
 

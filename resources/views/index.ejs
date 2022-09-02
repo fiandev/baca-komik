@@ -17,12 +17,12 @@
             </h1>
             <% for(let i = 0; i < comics.length; i++) {%>
             <% let komik = comics[i] %>
-            <div class="col-md-6 col-lg-6">
+            <div class="col-6 col-md-4 col-lg-3">
               <div class="d-flex gap-2 flex-column popular komik mx-1 mb-1 shadow-sm px-3 py-2 align-items-center position-relative">
                   <img class="img-fluid thumbnail" style="height:100%" src="/thumb/?url=<%= komik.thumb %>"  alt="thumbnail" />
                   <div class="d-flex flex-column">
                     <h1 class="title position-absolute px-2 text-center label shadow-sm" style="background: var(--blue);left:0;top:0">
-                      <a href="#"><%= "komik" %></a>
+                      <a href="<%= typeof type !== "undefined" ? `/type/${type}` : "#" %>"><%= typeof type !== "undefined" ? type : "komik" %></a>
                     </h1>
                     <h1 class="title text-center py-2" style="max-height: 100%;">
                       <a href="/detail/<%= komik.link.endpoint %>">

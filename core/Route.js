@@ -5,6 +5,7 @@ const HomeController = require("controllers/HomeController")
 const ReadController = require("controllers/ReadController")
 const DetailController = require("controllers/DetailController")
 const SearchController = require("controllers/SearchController")
+const TypeComicController = require("controllers/TypeComicController")
 
 const ImageController = require("controllers/ImageController")
 
@@ -16,6 +17,7 @@ class Route {
             this.get('/detail/komik/:slug', (req, res, next) => new DetailController(req, res, next).index()),
             this.get('/read/:slug', (req, res, next) => new ReadController(req, res, next).index()),
             this.get('/search', (req, res, next) => new SearchController(req, res, next).index()),
+            this.get('/type/:type', (req, res, next) => new TypeComicController(req, res, next).index()),
             
             
             this.get('/thumb', (req, res, next) => new ImageController(req, res, next).index())

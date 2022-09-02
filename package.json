@@ -27,6 +27,7 @@
     "configs": "config/",
     "controllers": "app/controllers/",
     "middleware": "app/middleware/",
-    "helpers": "app/helpers/"
+    "helpers": "app/helpers/",
+    "public": "public/"
   }
 }
