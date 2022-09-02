@@ -30,6 +30,11 @@ a {
 #footer .footer {
   border-top: solid 2px var(--blue);
 }
+#home .komik .content {
+  max-height: 20vh;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 /* sm */
 @media (max-width: 575.95px) {
   .komik .title {
@@ -64,6 +69,9 @@ a {
 }
 /* md */
 @media (min-width: 576px) {
+  .komik .title {
+    font-size: 1.2rem;
+  }
   .latest {
     max-height: 10vh;
     overflow-y: scroll;
@@ -92,6 +100,9 @@ a {
 }
 /* lg */
 @media (min-width: 992px) {
+  .komik .title {
+    font-size: 1.4rem;
+  }
   .latest {
     max-height: 25vh;
     overflow-y: scroll;
