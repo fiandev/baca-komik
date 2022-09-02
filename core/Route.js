@@ -9,7 +9,7 @@ const TypeComicController = require("../app/controllers/TypeComicController")
 
 const ImageController = require("../app/controllers/ImageController")
 
-const { log } = require('middleware/logging')
+const { log } = require('../app/middleware/logging')
 class Route {
     init() {
         return [
