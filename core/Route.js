@@ -1,13 +1,13 @@
 const Express = require('express')
 const router = Express.Router()
 
-const HomeController = require("controllers/HomeController")
-const ReadController = require("controllers/ReadController")
-const DetailController = require("controllers/DetailController")
-const SearchController = require("controllers/SearchController")
-const TypeComicController = require("controllers/TypeComicController")
+const HomeController = require("../app/controllers/HomeController")
+const ReadController = require("../app/controllers/ReadController")
+const DetailController = require("../app/controllers/DetailController")
+const SearchController = require("../app/controllers/SearchController")
+const TypeComicController = require("../app/controllers/TypeComicController")
 
-const ImageController = require("controllers/ImageController")
+const ImageController = require("../app/controllers/ImageController")
 
 const { log } = require('middleware/logging')
 class Route {

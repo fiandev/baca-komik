@@ -1,5 +1,5 @@
 const Controller = require("cores/Controller")
-const { komi } = require("configs/api")
+const { komi } = require("../../config/api")
 const axios = require('axios')
 
 class TypeComicController extends Controller {

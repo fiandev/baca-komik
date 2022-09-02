@@ -1,6 +1,6 @@
-const Controller = require("cores/Controller")
-const { urlTrim } = require("helpers/url")
-const { komi } = require("configs/api")
+const Controller = require("../../core/Controller")
+const { urlTrim } = require("../helpers/url")
+const { komi } = require("../../config/api")
 const axios = require('axios')
 class SearchController extends Controller {
   async index () {
