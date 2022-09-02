@@ -1,0 +1,32 @@
+{
+  "name": "komiku",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "fiandev",
+  "repository": {
+    "github": ""
+  },
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "ejs": "^3.1.8",
+    "express": "^4.17.1",
+    "express-device": "^0.4.2",
+    "image-downloader": "^4.3.0",
+    "module-alias": "^2.2.2",
+    "nodemon": "^2.0.19"
+  },
+  "_moduleAliases": {
+    "cores": "core/",
+    "configs": "config/",
+    "controllers": "app/controllers/",
+    "middleware": "app/middleware/",
+    "helpers": "app/helpers/"
+  }
+}
