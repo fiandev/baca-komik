@@ -11,10 +11,11 @@ class TypeComicController extends Controller {
     try {
       let { data } = await axios.get(`${ komi }/komikk/${ type }/page/${ page }`)
       let comics = data.mangas
+      
       this.view("index", {
-          comics: comics,
-          type: data.type
-        })
+        comics: comics,
+        type: data.type
+      })
     } catch (e) {
       this.status(500)
     }
