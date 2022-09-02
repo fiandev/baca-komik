@@ -1,4 +1,4 @@
-const Controller = require("cores/Controller")
+const Controller = require("../../core/Controller")
 const { komi } = require("../../config/api")
 const axios = require('axios')
 
