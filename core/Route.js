@@ -20,7 +20,8 @@ class Route {
             this.get('/type/:type', (req, res, next) => new TypeComicController(req, res, next).index()),
             
             
-            this.get('/thumb', (req, res, next) => new ImageController(req, res, next).index())
+            this.get('/thumb', (req, res, next) => new ImageController(req, res, next).index()),
+            this.get('/images/:filename', (req, res, next) => new ImageController(req, res, next).show())
             
         ]
     }

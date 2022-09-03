@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%= code %> | <%= message %></title>
+    <%- include("partials/header") -%>
+  </head>
+  <body>
+    <%- include("partials/nav") -%>
+    <div class="container py-2">
+      <section id="error">
+        <h1 class="code">
+          <%= code %>
+        </h1>
+        <p class="message">
+          <%= message %>
+        </p>
+      </section>
+      <%- include("partials/footer") -%>
+    </div>
+    <%- include("partials/script") -%>
+  </body>
+</html>

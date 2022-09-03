@@ -17,14 +17,17 @@ class Controller {
       
       response.status(statusCode).json(data)
     }
-    status(statusCode) {
+    status(statusCode, message = "error") {
       const { response } = this
       
-      response.status(statusCode)
+      this.view("error", {
+        code: statusCode,
+        message: message,
+      })
     }
-    raw(url, statusCode = 200) {
+    raw(url) {
       const { response } = this
-      response.status(statusCode).sendFile(url)
+      response.sendFile( url )
     }
 }
 

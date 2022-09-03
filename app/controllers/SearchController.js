@@ -9,13 +9,28 @@ class SearchController extends Controller {
     const page = request.query.page || 1
     
     if (!query) this.status(404)
-    let queryTrim = urlTrim( query )
-    let { data } = await axios.get(`${ komi }/search/${ queryTrim }/?page=${ page }`)
-    let comics = data.mangas
-    this.view("index", {
+    try {
+      let queryTrim = urlTrim( query )
+      let { data } = await axios.get(`${ komi }/search/${ queryTrim }/?page=${ page }`)
+      let comics = data.mangas
+      
+      /* Exeption query not found */
+      if (comics.length < 1) {
+        this.view("error", {
+          code: 404,
+          message: `query ${ query } not found`,
+          query: query
+        })
+      }
+      
+      this.view("index", {
         comics: comics,
         query: query
       })
+      
+    } catch (e) {
+      this.status(500, e.message)
+    }
   }
 }
 

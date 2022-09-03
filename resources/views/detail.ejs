@@ -9,19 +9,21 @@
   <body>
     <%- include("partials/nav") -%>
     <div class="container py-2">
-      <section id="detail" class="row gap-3">
+      <section id="detail" class="row gap-3 mb-2">
         <div class="col-lg-8">
           <div class="detail shadow d-flex flex-column align-items-center px-2 py-1">
             <% let detail = comic %>
             <h1 class="title fs-4"><%= detail.title %></h1>
-            <img class="img-fluid mb-2" src="<%= detail.thumb %>" alt="" />
+            <img class="img-fluid mb-2 rounded" src="<%= detail.thumb %>" alt="" />
             <div class="detail d-flex flex-column align-items-start text-capitalize">
-              <p>alternative title : <span class="fw-bold"><%= detail.alter[0] %></span></p>
+              <p>alternative : <span class="fw-bold"><%= detail.alter[0] %></span></p>
               <div class="d-flex gap-2">
-                genres : 
-                <div class="d-flex gap-1">
+                <p style="width: 20%">
+                  genres : 
+                </p>
+                <div class="d-flex gap-2 overflow-scroll">
                   <% detail.genres.forEach((genre) => { %>
-                  <p> <%= genre.name %> </p>
+                    <p> <%= genre.name %> </p>
                   <% }) %>
                 </div>
               </div>
